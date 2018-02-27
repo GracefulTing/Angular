@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS scope</title>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		<input ng-model="name">
+		<h1>{{greeting}}</h1>
+		<button ng-click="sayHello()">点我</button>
+	</div>
+	<script>
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.name="runoob";
+		$scope.sayHello = function(){
+			$scope.greeting = 'Hello ' + $scope.name + '!';
+		}
+	})
+	</script> -->
+
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		<ul>
+			<li ng-repeat="x in names">{{x}}</li>
+		</ul>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.names = ['Emsl','Jasld','Majr'];
+		})
+	</script> -->
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<h1>{{lastname}}家族成员:</h1>
+		<ul>
+			<li ng-repeat="x in names">{{x}} {{lastname}}</li>
+		</ul>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope,$rootScope){
+			$scope.names = ['Esa','Eamls','Mlskd'];
+			$rootScope.lastname="Relwks";
+		})
+	</script>
+</body>
+</html>

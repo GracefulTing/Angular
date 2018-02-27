@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Select选择框</title>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		<select name="" id="" ng-init="selectedName=names[0]" ng-model="selectedName" ng-options="x for x in names"></select>
+	</div>
+	<script>
+		var app = angular.module("myApp",[]);
+		app.controller('myCtrl',function($scope){
+			$scope.names=["Google",'Baidu','TaoBao'];
+		})
+	</script> -->
+
+	<!-- 使用ng-repeat -->
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		<p>选择网站:</p>
+		<select ng-model="selectedSite">
+			<option value="{{x.url}}" ng-repeat="x in sites">{{x.site}}</option>
+		</select>
+		<h1>你选择的是:{{selectedSite}}</h1>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.sites=[
+				{site:'Google',url:'http://www/google.com'},
+				{site:'Baidu',url:'http://www.baidu.com'},
+				{site:'Taobao',url:'http://www.taobao.com'}
+			]
+		})
+	</script> -->
+
+	<!-- 使用ng-options -->
+	<div ng-app="myApp" ng-controller="myCtrl">
+		<p>选择网站:</p>
+		<select name="" id="" ng-model="selectedSite" ng-options="x.site for x in sites"></select>
+		<h1>你选择的是:{{selectedSite.site}}</h1>
+		<p>网址为:{{selectedSite.url}}</p>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.sites=[
+				{site:'Google',url:'http://www/google.com'},
+				{site:'Baidu',url:'http://www.baidu.com'},
+				{site:'Taobao',url:'http://www.taobao.com'}
+			]
+		})
+	</script>
+</body>
+</html>
+
+<!-- 
+	ng-options:对象;
+	ng-repeat:字符串;
+-->

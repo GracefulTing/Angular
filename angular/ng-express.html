@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS表达式</title>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="">
+		<p>我的第一个表达式:{{3+5}}</p>
+	</div> -->
+
+	<!-- AngularJS数字 -->
+	<!-- <div ng-app="" ng-init="quantity=1;cost=5">
+		<p>总价:{{quantity * cost}}</p>
+	</div> -->
+
+	<!-- <div ng-app="" ng-init="quantity=1;cost=5">
+		<p>总价: <span ng-bind="quantity*cost"></span></p>
+	</div> -->
+
+	<!-- AngularJS字符串 -->
+	<!-- <div ng-app="" ng-init="firstName='John';lastName='Doe'">
+		<p>姓名：{{firstName + " " + lastName}}</p>
+	</div> -->
+
+	<!-- <div ng-app="" ng-init="firstName='John';lastName='Doe'">
+		<p>姓名: <span ng-bind="firstName + '' + lastName"></span></p>
+	</div> -->
+
+	<!-- AngularJS对象使用报错 -->
+	<!-- <div ng-app="" ng-init="person={firstName:'John',lastName='Doe'}">
+		<p>姓为{{person.lastName}}</p>
+	</div> -->
+
+	<!-- <div ng-app="" ng-init="person={firstName:'John',lastName='Doe'}">
+		<p>姓为 <span ng-bind="person.lastName"></span></p>
+	</div> -->
+
+	<!-- AngularJS数组 -->
+	<!-- <div ng-app="" ng-init="points=[1,2,3,4,5]">
+		<p>第三个值为{{points[2]}}</p>
+	</div> -->
+
+	<!-- <div ng-app="" ng-init="points=[1,2,3,4,5]">
+		<p>第三个值为<span ng-bind="points[2]"></span></p>
+	</div> -->
+</body>
+</html>
+
+<!-- 
+	AngularJS表达式与JavaScript表达式:
+	相同点:表达式可以包含字母，操作符，变量；
+	不同点：AngularJS表达式可以写在html中，不支持条件判断，循环及异常；支持过滤器.
+-->

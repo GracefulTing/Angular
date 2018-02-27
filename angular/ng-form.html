@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS表单</title>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<!-- 复选框 -->
+	<!-- <div ng-app="myApp" ng-controller="myCtrl">
+		<form action="">
+			选中复选框，显示标题:
+			<input type="checkbox" ng-model="myVar">
+		</form>
+		<h1 ng-show="myVar">My Header</h1>
+	</div>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.myVar = false;
+		})
+	</script> -->
+
+	<!-- 单选框(有问题) -->
+	<!-- <div ng-app="" ng-controller="myCtrl">
+		<form action="">
+			选择一个选项:
+			<input type="radio" ng-model="myVar" value="dogs">Dogs
+			<input type="radio" ng-model="myVar" value="tuts">Tutorials
+			<input type="radio" ng-model="myVar" value="cars">Cars
+		</form>
+		<div ng-switch="myVar">
+			<div ng-switch-when="dogs">
+				<h1>Dogs</h1>
+				<p>Welcome to a world of dogs.</p>
+			</div>
+			<div ng-switch-when="tuts">
+				<h1>Tutorials</h1>
+				<p>Learn from examples.</p>
+			</div>
+			<div ng-switch-when="cars">
+				<h1>Cars</h1>
+				<p>Read about cars.</p>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- HTML表单 -->
+	<div ng-app="myApp" ng-controller="formCtrl">
+		<form novalidate>
+			FirstName: <br>
+			<input type="text" ng-model="user.firstName"><br>
+			LastName: <br>
+			<input type="text" ng-model="user.lastName"><br>
+			<br><br>
+			<button ng-click="reset()">RESET</button>
+		</form>
+		<p>from={{user}}</p>
+		<p>master={{master}}</p>
+	</div>
+	<script>
+		var app  = angular.module('myApp',[]);
+		app.controller('formCtrl',function($scope){
+			$scope.master = {firstName:'John',lastName:'Doe'};
+			$scope.reset = function(){
+				$scope.user = angular.copy($scope.master);
+			}
+			$scope.reset();
+		})
+	</script>
+</body>
+</html>
+
+<!-- novalidate用于禁用浏览器默认的验证. -->
